@@ -52,4 +52,5 @@ Mkfile.old
 dkms.conf
 
 #custom
-Debug/*
+bootloader/Debug/*
+Application/Debug/*
