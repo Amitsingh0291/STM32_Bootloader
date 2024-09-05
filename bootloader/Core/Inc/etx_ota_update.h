@@ -15,7 +15,9 @@
 #define ETX_OTA_ACK  0x00    // ACK
 #define ETX_OTA_NACK 0x01    // NACK
 
-#define ETX_APP_FLASH_ADDR 0x08010000   //Application's Flash Address
+#define ETX_APP_FLASH_ADDR 		  0x08010000   //Application's Flash Address
+#define ETX_SLOT_ADDR 	   		  0x08020000   //Application's Flash Address
+#define ETX_CONFIG_FLASH_ADDR     0x08008000   //Configuration's address
 
 #define ETX_OTA_DATA_MAX_SIZE ( 512 )  //Maximum data Size
 #define ETX_OTA_DATA_OVERHEAD (    9 )  //data overhead
@@ -55,7 +57,7 @@ typedef struct
 {
   uint32_t package_size;
   uint32_t package_crc;
-  uint32_t reserved1;
+  uint32_t update_available;
   uint32_t reserved2;
 }__attribute__((packed)) meta_info;
 
